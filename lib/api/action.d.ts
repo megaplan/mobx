@@ -1,0 +1,15 @@
+export declare function action<A1, R, T extends (a1: A1) => R>(fn: T): T;
+export declare function action<A1, A2, R, T extends (a1: A1, a2: A2) => R>(fn: T): T;
+export declare function action<A1, A2, A3, R, T extends (a1: A1, a2: A2, a3: A3) => R>(fn: T): T;
+export declare function action<A1, A2, A3, A4, R, T extends (a1: A1, a2: A2, a3: A3, a4: A4) => R>(fn: T): T;
+export declare function action<A1, R, T extends (a1: A1) => R>(name: string, fn: T): T;
+export declare function action<A1, A2, R, T extends (a1: A1, a2: A2) => R>(name: string, fn: T): T;
+export declare function action<A1, A2, A3, R, T extends (a1: A1, a2: A2, a3: A3) => R>(name: string, fn: T): T;
+export declare function action<A1, A2, A3, A4, R, T extends (a1: A1, a2: A2, a3: A3, a4: A4) => R>(name: string, fn: T): T;
+export declare function action<T extends Function>(fn: T): T;
+export declare function action<T extends Function>(name: string, fn: T): T;
+export declare function action(customName: string): (target: Object, key: string, baseDescriptor?: PropertyDescriptor) => void;
+export declare function action(target: Object, propertyKey: string, descriptor?: PropertyDescriptor): void;
+export declare function runInAction<T>(block: () => T, scope?: any): T;
+export declare function runInAction<T>(name: string, block: () => T, scope?: any): T;
+export declare function isAction(thing: any): boolean;
