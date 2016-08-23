@@ -293,7 +293,7 @@ declare class ObservableMap<V> implements IInterceptable<IMapWillChange<V>>, ILi
     private _has(key);
     has(key: string): boolean;
     set(key: string, value: V): void;
-    delete(key: string): void;
+    delete(key: string): boolean;
     private _updateHasMapEntry(key, value);
     private _updateValue(name, newValue);
     private _addValue(name, newValue);
